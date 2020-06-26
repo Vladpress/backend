@@ -1,7 +1,0 @@
-{
-    "port": 4444,
-    "mongoose": {
-        "uri": "mongodb://localhost/goods",
-        "options": {}
-    }
-}
