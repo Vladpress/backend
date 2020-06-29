@@ -5,8 +5,6 @@ const { testMethod, findAllGoods, findGoodByID, createGood, updateGoodByID } = r
 
 const router = Router();
 
-//router.get("/*", testMethod);
-
 router.get("/goods", findAllGoods);
 
 router.get("/goods/:id", findGoodByID);  
