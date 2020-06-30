@@ -2,9 +2,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
-const router = require("./routes/goods.router");
+const router = require("./routes");
+const cors = require('cors');
 
-const {logErrors, clientErrorHandler, errorHandler} = require("./testMiddleware");
+const {logErrors, clientErrorHandler, errorHandler} = require("./utills");
 
 const app = express();
 
@@ -12,9 +13,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const port = process.env.port || 4444;
-
+app.use(cors());
 app.use(router);
-console.log("hi");
 app.use(logErrors);
 app.use(clientErrorHandler);
 

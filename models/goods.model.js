@@ -10,12 +10,17 @@ const goodScheme = new Schema({
     },
     salePrice: {
         type: Number,
+        required: true,
+        default: null,
+    },
+    img: {
+        type: String,
+        required: true,
         default: null,
     }
 },
 { versionKey: false }
 );
 
-const Good = mongoose.model("Good", goodScheme);
+module.exports = mongoose.model("Good", goodScheme);
 
-module.exports = Good;

@@ -1,7 +1,7 @@
 
 const { Router } = require("express");
 
-const { testMethod, findAllGoods, findGoodByID, createGood, updateGoodByID } = require('../controllers/goods.controller');
+const { findAllGoods, findGoodByID, createGood, updateGoodByID } = require('../controllers/goods.controller');
 
 const router = Router();
 

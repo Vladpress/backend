@@ -1,19 +1,12 @@
 const mongoose = require('mongoose');
 const Good = require("../models/goods.model");
-async function findAllGoods() {  
-  return Good.find();     
-}
 
-async function findGoodByID(id) {
-  return Good.findById(id);
-}
+ const findAllGoods = async () => Good.find();
 
-async function createGood(good) {    
-  return Good.create(good);     
-}
+ const findGoodByID = async (id) =>  Good.findById(id); 
 
-async function updateGoodByID(id, good) { 
-  return Good.findByIdAndUpdate(id, good);      
-}
+ const createGood = async (good) =>  Good.create(good); 
+
+ const updateGoodByID = async (id, good) =>  Good.findByIdAndUpdate(id, good);
 
 module.exports = {findAllGoods, findGoodByID, createGood, updateGoodByID}
