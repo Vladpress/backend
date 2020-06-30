@@ -1,35 +1,19 @@
 const mongoose = require('mongoose');
 const Good = require("../models/goods.model");
-async function findAllGoods() {
-    try {
-        return Good.find();
-      } catch(err) {
-       console.log(err)
-      }
+async function findAllGoods() {  
+  return Good.find();     
 }
 
 async function findGoodByID(id) {
-    try {
-        return Good.findById(id);
-      } catch(err) {
-       console.log(err)
-      }
+  return Good.findById(id);
 }
 
-async function createGood(good) {
-    try {
-        return Good.create(good);
-      } catch(err) {
-       console.log(err)
-      }
+async function createGood(good) {    
+  return Good.create(good);     
 }
 
-async function updateGoodByID(id, good) {
-    try {
-        return Good.findByIdAndUpdate(id, good);
-      } catch(err) {
-       console.log(err)
-      }
+async function updateGoodByID(id, good) { 
+  return Good.findByIdAndUpdate(id, good);      
 }
 
 module.exports = {findAllGoods, findGoodByID, createGood, updateGoodByID}

@@ -17,7 +17,6 @@ app.use(router);
 console.log("hi");
 app.use(logErrors);
 app.use(clientErrorHandler);
-app.use(errorHandler)
 
 mongoose.connect("mongodb://localhost:27017/goods", { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     app.listen(port, err => {
