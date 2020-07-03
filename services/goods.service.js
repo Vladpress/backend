@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Good = require("../models/goods.model");
 
- const findAllGoods = async () => Good.find();
+ const findAllGoods = () => Good.find();
 
  const findGoodByID = async (id) =>  Good.findById(id); 
 
