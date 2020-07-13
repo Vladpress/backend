@@ -5,8 +5,7 @@ const goodScheme = new Schema({
     productName: {
         type: String,
         required: true,
-        default: "NoProductName",
-        unique: true,
+        unique: true
     },
     salePrice: {
         type: Number,

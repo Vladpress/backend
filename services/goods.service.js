@@ -3,10 +3,12 @@ const Good = require("../models/goods.model");
 
  const findAllGoods = async () => Good.find();
 
- const findGoodByID = async (id) =>  Good.findById(id); 
+ const findGoodByID = async (id) =>  Good.findById(id);
+ 
+ const findGood = (query) =>  Good.find(query).lean();
 
  const createGood = async (good) =>  Good.create(good); 
 
  const updateGoodByID = async (id, good) =>  Good.findByIdAndUpdate(id, good);
 
-module.exports = {findAllGoods, findGoodByID, createGood, updateGoodByID}
+module.exports = {findAllGoods, findGoodByID, createGood, updateGoodByID, findGood}

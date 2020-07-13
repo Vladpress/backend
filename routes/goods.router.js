@@ -1,12 +1,15 @@
 
 const { Router } = require("express");
+const verifyToken = require("../middelwares/auth.middelwares")
 
 const { findAllGoods, findGoodByID, createGood, updateGoodByID } = require('../controllers/goods.controller');
 
 const router = Router();
 
-router.get("/goods", findAllGoods);
+router.use(verifyToken);
 
+router.get("/goods", findAllGoods);
+ 
 router.get("/goods/:id", findGoodByID);  
 
 router.post("/goods", createGood);
